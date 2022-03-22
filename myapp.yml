@@ -5,11 +5,9 @@ metadata:
   labels:
     app: myapp
 spec:
- type: NodePort
- ports:
-   - port: 8888
-     targetPort: 8888
-     nodePort: 30088
+  type: LoadBalancer
+  ports:
+    - port: 80
  selector:
   app: myapp
 ---
@@ -31,6 +29,6 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: rishald/myapp
+        image: rishald/myapp:20
         ports:
-        - containerPort: 8888
+        - containerPort: 80

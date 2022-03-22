@@ -9,7 +9,7 @@ spec:
  ports:
    - port: 8888
      targetPort: 8888
-     nodePort: 30088
+     nodePort: 30001
  selector:
   app: myapp
 ---
@@ -31,6 +31,6 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: rishald/myapp
+        image: rishald/myapp:20
         ports:
         - containerPort: 8888

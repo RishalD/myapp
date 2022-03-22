@@ -33,4 +33,4 @@ spec:
       - name: myapp
         image: rishald/myapp:20
         ports:
-        - containerPort: 8888
+        - containerPort: 80

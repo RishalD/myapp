@@ -29,6 +29,6 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: rishald/myapp:20
+        image: rishald/myapp:21
         ports:
         - containerPort: 80

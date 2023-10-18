@@ -1,20 +1,20 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: myapp-svc
+  name: my-app-svc
   labels:
     app: myapp
 spec:
   type: LoadBalancer
   ports:
-    - port: 80
- selector:
-  app: myapp
+  - port: 80
+  selector:
+    app: myapp
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp-deployment
+  name: my-myapp
   labels:
     app: myapp
 spec:
@@ -29,6 +29,6 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: rishald/myapp:20
+        image: rishald/myapp:21
         ports:
         - containerPort: 80

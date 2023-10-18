@@ -11,7 +11,7 @@ public class MyRestController {
 
     @GetMapping("/")
     public String myApp(){
-        return "Hello World! Time on server is " + LocalDate.now();
+        return "Hello World! Plymouth " + LocalDate.now();
     }
 
 

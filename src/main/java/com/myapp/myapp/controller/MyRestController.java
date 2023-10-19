@@ -9,7 +9,7 @@ import java.time.LocalDate;
 @RestController
 public class MyRestController {
 
-    @GetMapping("/")
+    @GetMapping("/testme")
     public String myApp(){
         return "Hello World! Plymouth " + LocalDate.now();
     }

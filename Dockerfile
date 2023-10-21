@@ -1,5 +1,5 @@
 FROM openjdk:8
-ARG JAR_FILE=target/myapp-2.6.4.jar
+ARG JAR_FILE=target/*.jar
 RUN echo ${JAR_FILE}
 COPY ${JAR_FILE} myapp.jar
 ENTRYPOINT ["java","-jar","/myapp.jar"]
